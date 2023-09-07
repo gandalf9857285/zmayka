@@ -1,4 +1,4 @@
-package sneke
+package main
 
 type Snake struct {
 	Parts []Point
