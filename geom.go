@@ -28,3 +28,18 @@ func (d Dir) Exec(p Point) Point {
 	}
 	//return Point{X: -1, Y: -1}
 }
+
+func (d Dir) CheckParallel(d2 Dir) bool {
+	switch d {
+	case Top:
+		return d2 == Bottom
+	case Right:
+		return d2 == Left
+	case Bottom:
+		return d2 == Top
+	case Left:
+		return d2 == Right
+	default:
+		return false
+	}
+}

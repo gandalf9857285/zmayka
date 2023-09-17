@@ -1,10 +1,13 @@
 package main
 
-import (
-	"github.com/ekprog/snake/src/snake"
-)
-
 func main() {
-	g := snake.NewGame()
-	g.Run()
+	r := NewGame()
+	r.CreateWorld(20)
+
+	s := NewSnake()
+	s.Reset()
+	r.SetSnake(s)
+
+	r.Run()
+	r.Exit()
 }
